@@ -173,21 +173,49 @@ h3, h4 {
 }
 
 .hero h1 {
-  font-size: clamp(5rem, 13vw, 10rem);
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
   font-family: 'Bebas Neue', sans-serif;
-  line-height: 0.92;
+  line-height: 0.95;
   margin-bottom: 24px;
   color: #fff;
   text-shadow: 0 0 80px rgba(255,59,47,0.15);
 }
 
-.hero p {
-  font-size: 1.15rem;
+/* ===== SLOGAN: palabra animada en H1 ===== */
+.slogan-word {
+  display: inline;
+  white-space: nowrap;
+  color: var(--red);
+  opacity: 1;
+  transition: opacity 1.2s ease;
+}
+
+.slogan-word.fading {
+  opacity: 0;
+}
+
+/* ===== BAJADAS ===== */
+.hero-bajada-a {
+  font-size: clamp(1rem, 2vw, 1.3rem);
   color: #bbb;
   font-weight: 300;
-  margin-bottom: 44px;
-  line-height: 1.7;
+  line-height: 1.6;
   max-width: 480px;
+  margin-bottom: 10px;
+}
+
+.hero-bajada-b {
+  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+  color: #555;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 480px;
+  margin-bottom: 44px;
+  letter-spacing: 0.03em;
+}
+
+.hero-bajada-b .accent {
+  color: var(--red);
 }
 
 .hero-btns {
@@ -538,6 +566,28 @@ h3, h4 {
   margin-bottom: 10px;
 }
 
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.footer-instagram:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
 /* ===== WHATSAPP FLOTANTE ===== */
 .wa-float {
   position: fixed;
@@ -588,7 +638,7 @@ h3, h4 {
   .nav-links { display: none; }
   .menu-btn { display: block; }
 
-  .hero h1 { font-size: clamp(4rem, 18vw, 7rem); }
+  .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
 
   .hero-content {
     padding: 60px 24px;
