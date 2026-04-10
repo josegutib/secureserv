@@ -57,6 +57,23 @@ document.querySelectorAll('.card, .case-card').forEach(function(el, i) {
   observer.observe(el);
 });
 
+// ===== SLOGAN: palabra animada =====
+(function() {
+  const word = document.querySelector('.slogan-word');
+  if (!word) return;
+  const phrases = ['te importa.', 'necesitas.'];
+  let current = 0;
+
+  setInterval(function() {
+    word.classList.add('fading');
+    setTimeout(function() {
+      current = (current + 1) % phrases.length;
+      word.textContent = phrases[current];
+      word.classList.remove('fading');
+    }, 1200);
+  }, 5000);
+})();
+
 // ===== NAVBAR: sombra al hacer scroll =====
 window.addEventListener('scroll', function() {
   const nav = document.querySelector('.navbar');
