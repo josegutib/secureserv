@@ -1,5 +1,5 @@
 // ===== NÚMERO WHATSAPP (un solo lugar para editar) =====
-const WA_NUMBER = '5491134232442';
+const WA_NUMBER = '5491169740875';
 const WA_DEFAULT_MSG = 'Hola, quiero una asesoría sobre seguridad perimetral';
 
 function buildWaUrl(text) {
